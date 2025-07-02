@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+
+<!--Description of dashboard page
+
+@author Ashan Rathsara-->
+
+
+<html lang="en">
+
+    <title><?php echo $title ?></title>
+
+    <head>
+        <!-- Styles -->
+        <?php $this->load->view('template/css.php'); ?>
+
+
+    </head>
+
+    <body class="infobar-offcanvas">
+
+        <!--header-->
+
+        <?php $this->load->view('template/header.php'); ?>
+
+        <!--end header-->
+
+        <div id="wrapper">
+            <div id="layout-static">
+
+                <!--dashboard side-->
+
+                <?php $this->load->view('template/dashboard_side.php'); ?>
+
+                <!--dashboard side end-->
+
+                <div class="static-content-wrapper">
+                    <div class="static-content">
+                        <div class="page-content">
+                            <ol class="breadcrumb">
+
+                                <li class=""><a href="index.html">HOME</a></li>
+                                <li class="active"><a href="index.html">LOAN</a></li>
+
+                            </ol>
+
+
+                            <div class="page-tabs">
+                                <ul class="nav nav-tabs">
+
+                                    <li class="active"><a data-toggle="tab" href="#tab1">LOAN</a></li>
+                                    <li><a data-toggle="tab" href="#tab2">VIEW LOAN</a></li>
+
+                                </ul>
+                            </div>
+                            <div class="container-fluid">
+
+
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab1">
+
+                                        <div class="row">
+                                            <div class="col-xs-12">
+
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="panel panel-info">
+                                                            <div class="panel-heading"><h2>ADD LOAN</h2></div>
+                                                            <div class="panel-body">
+                                                                <form class="form-horizontal" id="frm_loan_entry" name="frm_loan_entry" action="<?php echo base_url(); ?>Pay/Loan_Entry/insert_data" method="POST">
+                                                                    
+                                                                    <!--success Message-->
+                                                                    <?php if (isset($_SESSION['success_message']) && $_SESSION['success_message'] != '') { ?>
+                                                                        <div id="spnmessage" class="alert alert-dismissable alert-success success_redirect">
+                                                                            <strong>Success !</strong> <?php echo $_SESSION['success_message'] ?>
+                                                                        </div>
+                                                                    <?php } ?>
+
+                                                                    <!--Error Message-->
+                                                                    <?php if (isset($_SESSION['error_message']) && $_SESSION['error_message'] != '') { ?>
+                                                                        <div id="spnmessage" class="alert alert-dismissable alert-danger error_redirect">
+                                                                            <strong>Error !</strong> <?php echo $_SESSION['error_message'] ?>
+                                                                        </div>
+                                                                    <?php } ?>
+                                                                    
+                                                                    <div class="form-group col-sm-12">
+                                                                        <div class="col-sm-8">
+                                                                            <img style="margin-left: 30%; width: 120px; height: 100px;" src="<?php echo base_url(); ?>assets/images/loans.jpg" >
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                    <div class="form-group col-sm-6">
+                                                                        <label for="focusedinput" class="col-sm-4 control-label">Category</label>
+                                                                        <div class="col-sm-8">
+                                                                            <select class="form-control" required="required" id="cmb_cat" name="cmb_cat" onchange="selctcity()">
+
+
+                                                                                <option value="" default>-- Select --</option>
+                                                                                <option value="Employee">Employee</option>
+                                                                                <option value="Department">Department</option>
+                                                                                <option value="Designation">Designation</option>
+                                                                                <option value="Employee_Group">Employee_Group</option>
+                                                                                <option value="Company">Company</option>   
+
+                                                                            </select>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="form-group col-sm-6">
+                                                                        <label for="focusedinput" id="change" class="col-sm-4 control-label"></label>
+                                                                        <div class="col-sm-8" id="cat_div">
+                                                                            <select class="form-control" required="required" id="cmb_cat2" name="cmb_cat2" >
+
+                                                                            </select>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="form-group col-sm-6">
+                                                                        <label for="focusedinput" class="col-sm-4 control-label">Loan Type</label>
+                                                                        <div class="col-sm-8">
+                                                                            <select class="form-control" required="required" id="cmb_loan_id" name="cmb_loan_id" >
+
+
+                                                                                <option value="" default>-- Select --</option>
+                                                                                <?php foreach ($data_loan as $t_data) { ?>
+                                                                                    <option value="<?php echo $t_data->Loan_ID; ?>" ><?php echo $t_data->loan_name; ?></option>
+
+                                                                                <?php }
+                                                                                ?>        
+
+                                                                            </select>
+                                                                        </div>
+
+                                                                    </div>
+
+
+                                                                    <div class="form-group col-sm-6">
+                                                                        <label for="focusedinput" class="col-sm-4 control-label">Loan Amount</label>
+                                                                        <div class="col-sm-8">
+                                                                            <input type="text" class="form-control" required="required" id="txt_amount" name="txt_amount" placeholder="Ex: 500000">
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="form-group col-sm-6">
+                                                                        <label for="focusedinput" class="col-sm-4 control-label">No of Installment</label>
+                                                                        <div class="col-sm-8">
+                                                                            <input type="text" class="form-control" required="required" id="txt_no_of_inst" name="txt_no_of_inst" placeholder="Ex: 24">
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="form-group col-sm-6">
+                                                                        <label for="focusedinput" class="col-sm-4 control-label">Rate</label>
+                                                                        <div class="col-sm-8">
+                                                                            <input type="text" class="form-control" required="required" id="txt_rate" name="txt_rate" placeholder="Ex: 12">
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="form-group col-sm-6">
+                                                                        <label for="focusedinput" class="col-sm-4 control-label">Monthly Installment</label>
+                                                                        <div class="col-sm-8">
+                                                                            <input type="text" class="form-control" required="required" id="txt_m_inst" name="txt_m_inst" placeholder="">
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="form-group col-sm-6">
+                                                                        <label for="focusedinput" class="col-sm-4 control-label">Amount with Interest</label>
+                                                                        <div class="col-sm-8">
+                                                                            <input type="text" class="form-control" required="required" id="txt_amt_with_ins" name="txt_amt_with_ins" placeholder="">
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="form-group col-sm-6">
+                                                                        <label for="focusedinput" class="col-sm-4 control-label">Month</label>
+                                                                        <div class="col-sm-8">
+                                                                            <select required="" class="form-control" id="cmb_month" name="cmb_month">
+
+                                                                                <option value="1">January</option>
+                                                                                <option value="2">February</option>
+                                                                                <option value="3">March</option>
+                                                                                <option value="4">April</option>
+                                                                                <option value="5">May</option>
+                                                                                <option value="6">June</option>
+                                                                                <option value="7">July</option>
+                                                                                <option value="8">August</option>
+                                                                                <option value="9">September</option>
+                                                                                <option value="10">October</option>
+                                                                                <option value="11">November</option>
+                                                                                <option value="12">December</option>
+
+                                                                            </select>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="form-group col-sm-6">
+                                                                        <label for="focusedinput" class="col-sm-4 control-label"></label>
+                                                                        <div class="col-sm-8">
+                                                                            <button type="button" id="submit" name="submit" class="btn-primary btn fa fa-check" onclick="calculate()">&nbsp;&nbsp;CALCULATE</button>
+                                                                        </div>
+
+                                                                    </div>
+
+
+
+
+
+                                                                    <!--submit button-->
+                                                                    <?php $this->load->view('template/btn_submit.php'); ?>
+                                                                    <!--end submit-->
+
+                                                                </form>
+                                                                <hr>
+
+                                                                <div id="divmessage" class="">
+
+                                                                    <div id="spnmessage"> </div>
+                                                                </div>
+
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="tab-pane" id="tab2">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="panel panel-primary">
+                                                    <div class="panel-heading"><h2>VIEW LOANS</h2></div>
+                                                    <div class="panel-body">
+
+                                                        <form  class="form-horizontal" id="frm_in_out_rpt" name="frm_in_out_rpt" method="POST">
+
+
+                                                            <!--                                                            <div class="form-group col-sm-12">
+                                                                                                                            <div class="col-sm-6">
+                                                                                                                                <img class="imagecss1" src="<?php echo base_url(); ?>assets/images/attendance_inout.png" >
+                                                                                                                            </div>
+                                                            
+                                                                                                                        </div>-->
+
+                                                            <div class="form-group col-md-12">
+                                                                <div class="form-group col-sm-3">
+                                                                    <label for="focusedinput" class="col-sm-4 control-label">Emp No</label>
+                                                                    <div class="col-sm-8">
+                                                                        <input type="text" class="form-control" name="txt_emp" id="txt_emp" placeholder="Ex: 0001">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="form-group col-sm-3">
+                                                                    <label for="focusedinput" class="col-sm-4 control-label">Emp Name</label>
+                                                                    <div class="col-sm-8">
+                                                                        <input type="text" class="form-control" name="txt_emp_name" id="txt_emp_name" placeholder="Ex: Ashan">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="form-group col-sm-3">
+                                                                    <label for="focusedinput" class="col-sm-4 control-label">Designation</label>
+                                                                    <div class="col-sm-8">
+                                                                        <select class="form-control" id="cmb_desig" name="cmb_desig" >
+
+                                                                            <option value="" default>-- Select --</option>
+                                                                            <?php foreach ($data_desig as $t_data) { ?>
+                                                                                <option value="<?php echo $t_data->Des_ID; ?>" ><?php echo $t_data->Desig_Name; ?></option>
+
+                                                                            <?php }
+                                                                            ?>
+
+                                                                        </select>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="form-group col-sm-3">
+                                                                    <label for="focusedinput" class="col-sm-4 control-label">Department</label>
+                                                                    <div class="col-sm-8">
+                                                                        <select class="form-control" id="cmb_dep" name="cmb_dep" >
+
+
+                                                                            <option value="" default>-- Select --</option>
+                                                                            <?php foreach ($data_dep as $t_data) { ?>
+                                                                                <option value="<?php echo $t_data->Dep_ID; ?>" ><?php echo $t_data->Dep_Name; ?></option>
+
+                                                                            <?php }
+                                                                            ?>
+
+                                                                        </select>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="form-group col-sm-3">
+                                                                    <label for="focusedinput" class="col-sm-4 control-label">Company</label>
+                                                                    <div class="col-sm-8">
+                                                                        <select class="form-control"  id="cmb_comp" name="cmb_comp" >
+
+
+                                                                            <option value="" default>-- Select --</option>
+                                                                            <?php foreach ($data_cmp as $t_data) { ?>
+                                                                                <option value="<?php echo $t_data->Cmp_ID; ?>" ><?php echo $t_data->Company_Name; ?></option>
+
+                                                                            <?php }
+                                                                            ?>
+
+                                                                        </select>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="form-group col-sm-3">
+                                                                        <label for="focusedinput" class="col-sm-4 control-label">Loan Type</label>
+                                                                        <div class="col-sm-8">
+                                                                            <select class="form-control" required="required" id="cmb_loan_type" name="cmb_loan_type" >
+
+
+                                                                                <option value="" default>-- Select --</option>
+                                                                                <?php foreach ($data_loan as $t_data) { ?>
+                                                                                    <option value="<?php echo $t_data->Loan_ID; ?>" ><?php echo $t_data->loan_name; ?></option>
+
+                                                                                <?php }
+                                                                                ?>        
+
+                                                                            </select>
+                                                                        </div>
+
+                                                                    </div>
+                                                            </div>
+
+                                                            <div class="form-group col-md-6">
+                                                                <div class="form-group col-sm-6">
+                                                                    <label for="focusedinput" class="col-sm-4 control-label">Year</label>
+                                                                    <div class="col-sm-8">
+                                                                        <select required="" class="form-control" id="cmb_year" name="cmb_year">
+                                                                                <option value="" default>-- Select --</option>
+                                                                                <option value="2016">2016</option>
+                                                                                <option value="2017">2017</option>
+                                                                                <option value="2016">2018</option>
+                                                                                <option value="2017">2019</option>
+                                                                                <option value="2016">2020</option>
+                                                                                <option value="2017">2021</option>
+                                                                                <option value="2016">2022</option>
+                                                                                <option value="2017">2023</option>
+                                                                                <option value="2016">2024</option>
+                                                                                <option value="2017">2025</option>
+                                                                                <option value="2016">2026</option>
+                                                                                <option value="2017">2027</option>
+                                                                                <option value="2016">2028</option>
+                                                                                <option value="2017">2029</option>
+                                                                                <option value="2016">2030</option>
+
+                                                                            </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <input  type="button"  id="search" name="search" class="btn-green btn fa fa-check" value="&nbsp;&nbsp;VIEW&nbsp; REPORT" >
+                                                                <input type="button"  id="cancel" name="cancel" class="btn-danger-alt btn fa fa-check" value="&nbsp;&nbsp;CLEAR" >    
+                                                            </div>
+                                                        </form>
+                                                        <hr>
+
+
+                                                    </div>
+                                                    <div id="search_body">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+
+
+
+                                </div>
+
+                            </div> <!-- .container-fluid -->
+                        </div>
+                        <!--Footer-->
+                        <?php $this->load->view('template/footer.php'); ?>	
+                        <!--End Footer-->
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!-- Load site level scripts -->
+
+            <?php $this->load->view('template/js.php'); ?>							<!-- Initialize scripts for this page-->
+
+            <!-- End loading page level scripts-->
+
+            <script src="<?php echo base_url(); ?>system_js/Payroll/loan_entry.js"></script>
+
+
+            <!--Dropdown selected text into label-->
+            <script type="text/javascript">
+                                                                                $(function () {
+                                                                                    $("#cmb_cat").on("change", function () {
+                                                                                        $("#change").text($("#cmb_cat").find(":selected").text());
+                                                                                    }).trigger("change");
+                                                                                });
+            </script>
+
+
+            <script>
+                function selctcity()
+                {
+
+                    var branch_code = $('#cmb_cat').val();
+//                alert(branch_code);
+
+                    $.post('<?php echo base_url(); ?>index.php/Pay/Deduction/dropdown/',
+                            {
+                                cmb_cat: branch_code
+
+
+
+                            },
+                    function (data)
+                    {
+//                            alert(data);
+
+//                            $('#cmb_cat2').remove();
+                        $('#cmb_cat2').html(data);
+                    });
+
+                }
+
+            </script>
+
+            <!--JQuary Validation-->
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $("#frm_loan_entry").validate();
+                    $("#spnmessage").hide("shake", {times: 6}, 3500);
+                });
+            </script>
+            
+            
+            <!--Auto complete-->
+            <script type="text/javascript">
+                $(function () {
+                    $("#txt_emp_name").autocomplete({
+                        source: "<?php echo base_url(); ?>Reports/Attendance/Report_Attendance_In_Out/get_auto_emp_name"
+                    });
+                });
+
+                $(function () {
+                    $("#txt_emp").autocomplete({
+                        source: "<?php echo base_url(); ?>Reports/Attendance/Report_Attendance_In_Out/get_auto_emp_no"
+                    });
+                });
+            </script>
+            
+            
+            <script>
+
+                $(function () {
+                    $('#from_date').datepicker(
+                            {"setDate": new Date(),
+                                "autoclose": true,
+                                "todayHighlight": true,
+                                format: 'yyyy/mm/dd'});
+
+                    $('#to_date').datepicker(
+                            {"setDate": new Date(),
+                                "autoclose": true,
+                                "todayHighlight": true,
+                                format: 'yyyy/mm/dd'});
+
+                });
+                $("#success_message_my").hide("bounce", 2000, 'fast');
+
+
+                $("#search").click(function () {
+                    $('#search_body').html('<center><p><img style="width: 50;height: 50;" src="<?php echo base_url(); ?>assets/images/icon-loading.gif" /></p><center>');
+                    $('#search_body').load("<?php echo base_url(); ?>Pay/Loan_Entry/getLoans", {'txt_emp': $('#txt_emp').val(), 'txt_emp_name': $('#txt_emp_name').val(), 'cmb_desig': $('#cmb_desig').val(), 'cmb_dep': $('#cmb_dep').val(),'cmb_loan_type': $('#cmb_loan_type').val(),'cmb_year': $('#cmb_year').val()});
+                });
+
+
+            </script>
+            
+            <!--Clear Text Boxes-->
+            <script type="text/javascript">
+
+                $("#cancel").click(function () {
+
+                    $("#txt_emp").val("");
+                    $("#txt_emp_name").val("");
+                    $("#cmb_desig").val("");
+                    $("#cmb_dep").val("");
+                    $("#cmb_comp").val("");
+                    $("#txt_nic").val("");
+                    $("#cmb_gender").val("");
+                    $("#cmb_loan_type").val("");
+
+
+                });
+            </script>
+
+    </body>
+
+
+</html>

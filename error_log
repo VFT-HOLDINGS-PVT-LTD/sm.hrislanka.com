@@ -1,0 +1,174 @@
+[09-Feb-2024 05:26:42 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 31
+[09-Feb-2024 05:39:29 UTC] PHP Warning:  Undefined array key "EmpId" in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/saveSuperData.php on line 21
+[09-Feb-2024 05:39:29 UTC] PHP Warning:  Undefined array key "AttTime" in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/saveSuperData.php on line 22
+[09-Feb-2024 05:39:29 UTC] PHP Warning:  Undefined array key "CheckingStatus" in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/saveSuperData.php on line 23
+[09-Feb-2024 05:39:29 UTC] PHP Warning:  Undefined array key "VerifyType" in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/saveSuperData.php on line 24
+[09-Feb-2024 05:39:29 UTC] PHP Warning:  Undefined array key 1 in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/saveSuperData.php on line 28
+[29-Apr-2024 03:59:38 UTC] PHP Fatal error:  Cannot declare class Attendance_Manual_Entry_SAPP, because the name is already in use in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/application/views/Attendance/Attendance_Manual_View_SUP/index.php on line 0
+[17-May-2024 04:51:46 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 04:52:54 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 04:54:04 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 04:55:11 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 04:56:22 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 04:57:30 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 04:58:39 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 04:59:47 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:00:57 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:02:05 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:03:13 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:04:21 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:05:32 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:06:41 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:07:50 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:08:59 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:10:08 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:11:18 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:12:27 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:13:38 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:14:48 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:15:57 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:17:05 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:18:13 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:19:22 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:20:31 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:21:41 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:22:49 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:23:58 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[17-May-2024 05:25:06 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 10
+[02-Jul-2024 10:23:45 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 31
+[02-Jul-2024 10:23:45 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 36
+[02-Jul-2024 10:23:45 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 37
+[02-Jul-2024 10:23:45 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 38
+[02-Jul-2024 10:23:45 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 39
+[02-Jul-2024 10:23:45 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 40
+[02-Jul-2024 10:23:45 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 41
+[02-Jul-2024 10:23:45 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 42
+[02-Jul-2024 10:23:45 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 31
+[02-Jul-2024 10:26:05 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 31
+[02-Jul-2024 10:26:05 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 36
+[02-Jul-2024 10:26:05 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 37
+[02-Jul-2024 10:26:05 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 38
+[02-Jul-2024 10:26:05 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 39
+[02-Jul-2024 10:26:05 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 40
+[02-Jul-2024 10:26:05 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 41
+[02-Jul-2024 10:26:05 UTC] PHP Warning:  Trying to access array offset on value of type int in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 42
+[02-Jul-2024 10:26:05 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 31
+[26-Jul-2024 12:43:42 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/mkm7bcx7u2yz/public_html/petcolanka.vfthris.com/save_data.php on line 31
+[04-Apr-2025 07:27:06 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /home/g8778n80i8s8/public_html/sm.hrislanka.com/saveSuperData.php:93
+Stack trace:
+#0 /home/g8778n80i8s8/public_html/sm.hrislanka.com/saveSuperData.php(93): mysqli->query()
+#1 {main}
+  thrown in /home/g8778n80i8s8/public_html/sm.hrislanka.com/saveSuperData.php on line 93
+[04-Apr-2025 07:27:07 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /home/g8778n80i8s8/public_html/sm.hrislanka.com/saveSuperData.php:93
+Stack trace:
+#0 /home/g8778n80i8s8/public_html/sm.hrislanka.com/saveSuperData.php(93): mysqli->query()
+#1 {main}
+  thrown in /home/g8778n80i8s8/public_html/sm.hrislanka.com/saveSuperData.php on line 93
+[04-Apr-2025 07:27:08 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /home/g8778n80i8s8/public_html/sm.hrislanka.com/saveSuperData.php:93
+Stack trace:
+#0 /home/g8778n80i8s8/public_html/sm.hrislanka.com/saveSuperData.php(93): mysqli->query()
+#1 {main}
+  thrown in /home/g8778n80i8s8/public_html/sm.hrislanka.com/saveSuperData.php on line 93
+[08-May-2025 15:13:32 Asia/Colombo] PHP Fatal error:  Cannot redeclare get_client_ips() (previously declared in /home/g8778n80i8s8/public_html/sm.hrislanka.com/application/controllers/Attendance/Attendance_Manual_Entry.php:142) in /home/g8778n80i8s8/public_html/sm.hrislanka.com/application/controllers/Attendance/Attendance_Manual_Entry.php on line 193
