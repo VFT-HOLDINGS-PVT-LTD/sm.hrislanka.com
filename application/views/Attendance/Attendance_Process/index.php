@@ -70,32 +70,32 @@
                                                                 <form action="<?php echo base_url(); ?>index.php/Attendance/Attendance_Process_New/emp_attendance_process" class="form-horizontal" id="frmBackup" name="frmBackup" method="POST">
 
                                                                     <!--success Message-->
-                                                                    <?php if (isset($_SESSION['success_message']) && $_SESSION['success_message'] != '') { ?>
+                                                                    <?php if (isset($_SESSION['success_message']) && $_SESSION['success_message'] != '') {?>
                                                                         <div id="spnmessage" class="alert alert-dismissable alert-success success_redirect">
-                                                                            <strong>Success !</strong> <?php echo $_SESSION['success_message'] ?>
+                                                                            <strong>Success !</strong>                                                                                                       <?php echo $_SESSION['success_message'] ?>
                                                                         </div>
-                                                                    <?php } ?>
+                                                                    <?php }?>
 
                                                                     <!--Error Message-->
-                                                                    <?php if (isset($_SESSION['error_message']) && $_SESSION['error_message'] != '') { ?>
+                                                                    <?php if (isset($_SESSION['error_message']) && $_SESSION['error_message'] != '') {?>
                                                                         <div id="spnmessage" class="alert alert-dismissable alert-danger error_redirect">
-                                                                            <strong>Error !</strong> <?php echo $_SESSION['error_message'] ?>
+                                                                            <strong>Error !</strong>                                                                                                     <?php echo $_SESSION['error_message'] ?>
                                                                         </div>
-                                                                    <?php } ?>
+                                                                    <?php }?>
 
 
                                                                     <!--Employees without allocate shift-->
-                                                                    <?php if (count($sh_employees) > 0) { ?>
+                                                                    <?php if (count($sh_employees) > 0) {?>
                                                                         <h4 style = "color: #000">* Please Allocate Shift for following employees for First Time </h4>
                                                                         <div style = "color: red; font-size: 20px; ">
 
                                                                             <?php
-                                                                            foreach ($sh_employees as $t_data) {
-                                                                                echo $t_data->EmpNo . ", ";
-                                                                            }
-                                                                            ?>
+                                                                                foreach ($sh_employees as $t_data) {
+                                                                                    echo $t_data->EmpNo . ", ";
+                                                                                }
+                                                                                ?>
                                                                         </div>
-                                                                    <?php } ?> 
+                                                                    <?php }?>
                                                                     <br><br>
 
 
@@ -112,7 +112,29 @@
                                                                     </div>
                                                                     <br><br><br><br><br><br><br><br>
 
+                                                                <div class="form-group col-sm-6">
+                                                                    <label for="focusedinput"
+                                                                        class="col-sm-4 control-label">Month</label>
+                                                                    <div class="col-sm-8">
+                                                                        <select required="" class="form-control"
+                                                                            id="cmb_month" name="cmb_month">
+                                                                            <option value="">--Select--</option>
+                                                                            <option value="1">January</option>
+                                                                            <option value="2">February</option>
+                                                                            <option value="3">March</option>
+                                                                            <option value="4">April</option>
+                                                                            <option value="5">May</option>
+                                                                            <option value="6">June</option>
+                                                                            <option value="7">July</option>
+                                                                            <option value="8">August</option>
+                                                                            <option value="9">September</option>
+                                                                            <option value="10">October</option>
+                                                                            <option value="11">November</option>
+                                                                            <option value="12">December</option>
+                                                                        </select>
+                                                                    </div>
 
+                                                                </div>
 
 
 

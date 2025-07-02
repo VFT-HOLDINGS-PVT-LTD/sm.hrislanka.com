@@ -35,6 +35,12 @@ class db_model extends CI_Model {
         return $result;
     }
 
+    public function getUpdateData($query) {
+        // This will allow you to run a raw SQL query
+        $result = $this->db->query($query);
+        return $result;
+    }
+
     /*
      * Get Data
      */

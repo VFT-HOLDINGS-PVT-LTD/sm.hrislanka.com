@@ -579,6 +579,18 @@ class Attendance_Process_New extends CI_Controller
     {
 
         date_default_timezone_set('Asia/Colombo');
+        $month = $this->input->post('cmb_month');
+
+        $year = date('Y'); // Current year. You can also get this from POST if needed.
+
+        // Create from_date and to_date based on selected month
+        $from_date = date("Y-m-01", strtotime("$year-$month-01")); // First day of the month
+        $to_date = date("Y-m-t", strtotime($from_date));           // Last day of the month
+
+
+        $query1 = "UPDATE tbl_individual_roster SET Is_processed = 0 WHERE FDate BETWEEN '" . $from_date . "' AND '" . $to_date . "';";
+
+        $result = $this->Db_model->getUpdateData($query1);
         /*
          * Get Employee Data
          * Emp no , EPF No, Roster Type, Roster Pattern Code, Status
@@ -1191,14 +1203,14 @@ class Attendance_Process_New extends CI_Controller
                     $ED = 0; //ED minutes
                     $iCalcHaffT = 0;
                     // New Late with HFD
-                    
+
                     if ($InTime != '' && $InTime != $OutTime && $Day == 'DU' || $OutTime != '' && $Day == 'DU') {
 
                         $SHStartTime = strtotime($SHFT);
                         $InTimeSrt = strtotime($InTime);
 
                         $iCalc = ($InTimeSrt - $SHStartTime) / 60; //minutes
-                        
+
                         $HaffDayaLeave = $this->Db_model->getfilteredData("SELECT count(EmpNo) as HasRow FROM tbl_leave_entry where EmpNo = $EmpNo and Leave_Date = '$FromDate' AND Leave_Count='0.5' ");
 
                         // if ($HaffDayaLeave[0]->HasRow == 0) {
@@ -1207,7 +1219,7 @@ class Attendance_Process_New extends CI_Controller
                         //     $lateM = 0;
                         // }
                         $lateM = $iCalc - $GracePrd;
-                        
+
 
                         $HaffDayaLeave = $this->Db_model->getfilteredData("SELECT * FROM tbl_leave_entry where EmpNo = $EmpNo and Leave_Date = '$FromDate' AND Leave_Count='0.5' ");
                         // echo $HaffDayaLeave[0]->Is_Approve.'********';
@@ -1220,7 +1232,7 @@ class Attendance_Process_New extends CI_Controller
                             $SHToTimeSrt = strtotime($SHTtime);
 
                             $iCalcHaffT = ($InTimeSrt - $SHToTimeSrt) / 60;
-                            
+
                             if ($InTime <= "11:00:00") {
                                 $lateM;
                             } else {
@@ -1237,17 +1249,17 @@ class Attendance_Process_New extends CI_Controller
                                 }
                             }
 
-                            
+
 
                         }
-                        
+
 
                         $SHEndTime = strtotime($SHTT);
                         $OutTimeSrt = strtotime($OutTime);
 
                         $iCalcED = ($SHEndTime - $OutTimeSrt) / 60; //minutes
 
-                        if($OutTime != '' && $InDate == $OutDate){
+                        if ($OutTime != '' && $InDate == $OutDate) {
                             if ($ED >= 0) {
                                 $ED = $iCalcED;
                             }
@@ -1409,16 +1421,16 @@ class Attendance_Process_New extends CI_Controller
                                 $lateM = 0;
                                 $Late_Status = 0;
                                 $DayStatus = 'SL';
-    
+
                             } else {
                                 // welatwa ewilla ne(short leave ektath passe late /haffDay ne )
                                 $lateM = $iCalcShortLT;
                                 $DayStatus = 'SL';
-    
+
                                 // echo "2gg";
                             }
                         }
-                        
+
                     }
 
                     // // var_dump($InDate . ' ' . $InTime . ' ' . $ED . ' ' . $DayStatus);
@@ -1614,7 +1626,7 @@ class Attendance_Process_New extends CI_Controller
                         $ED = 0;
                     }
                     //apoint date ekata kalin off dawasakath ab saha nopay wadinna one
-                    if($FromDate <= $apoint_date ){
+                    if ($FromDate <= $apoint_date) {
                         $Nopay = 1;
                         $DayStatus = 'AB';
                         $Nopay_Hrs = 0;
@@ -1629,19 +1641,19 @@ class Attendance_Process_New extends CI_Controller
                     if ($settings[0]->Ed == 0) {
                         $ED = 0;
                     }
-                    if($lateM >= 0){
+                    if ($lateM >= 0) {
                         $lateM;
-                    }else{
+                    } else {
                         $lateM = 0;
                     }
 
-                    if($ED >= 0){
+                    if ($ED >= 0) {
                         $ED;
-                    }else{
+                    } else {
                         $ED = 0;
                     }
-                    
-                    
+
+
                     $HaffDayaLeave = $this->Db_model->getfilteredData("SELECT * FROM tbl_leave_entry where EmpNo = $EmpNo and Leave_Date = '$FromDate' AND Leave_Count='0.5' AND Is_Approve = 1");
                     if (!empty($HaffDayaLeave[0]->Is_Approve)) {
                         if ($InTime == null || $InTime == "" || $InTime == "00:00:00") {
@@ -1657,14 +1669,14 @@ class Attendance_Process_New extends CI_Controller
                                 $DayStatus = 'HFD/AB';
                             }
                         }
-                    }else{
+                    } else {
                         if ($InTime == "00:00:00" && $OutTime == "00:00:00" && $Day == 'DU') {
                             $DayStatus = 'AB';
                             $Nopay = 1;
                             $Nopay_Hrs = (((strtotime($SHTT) - strtotime($SHFT))) / 60);
                         }
                     }
-                    
+
                     // echo $InTime . '|-|' . $OutTime . ' || ' . $EmpNo;
                     // echo "<br>";
                     // echo $FromDate;
@@ -1689,7 +1701,8 @@ class Attendance_Process_New extends CI_Controller
             // $insert_id = $this->Db_model->getfilteredData("SELECT `Lv_T_ID` FROM tbl_leave_types WHERE `leave_name`='".$LeaveName."'");//change action
             // $Lv_T_ID = $insert_id[0]->Lv_T_ID;//change action
 
-            function get_client_ips() {
+            function get_client_ips()
+            {
                 $ipaddress = '';
                 if (getenv('HTTP_CLIENT_IP')) {
                     $ipaddress = getenv('HTTP_CLIENT_IP');
@@ -1717,16 +1730,16 @@ class Attendance_Process_New extends CI_Controller
 
             date_default_timezone_set('Asia/Colombo');
             $current_time = date('Y-m-d H:i:s');
-            
+
             $system_page_name = "Attendance - Attendance Process";//change action
-            $spnID = $this->Db_model->getfilteredData("select `id` from tbl_audit_pages where `system_page_name` = '".$system_page_name."'");
+            $spnID = $this->Db_model->getfilteredData("select `id` from tbl_audit_pages where `system_page_name` = '" . $system_page_name . "'");
 
             $dataArray = array(
                 'log_user_id' => $Emp,
                 'ip_address' => $ip,
                 'system_action' => 'Attendance Process successfully',//change action
                 'trans_time' => $current_time,
-                'system_page' => $spnID[0]->id 
+                'system_page' => $spnID[0]->id
             );
 
             $this->Db_model->insertData("tbl_audit_log_all", $dataArray);
@@ -1741,7 +1754,8 @@ class Attendance_Process_New extends CI_Controller
             // $insert_id = $this->Db_model->getfilteredData("SELECT `Lv_T_ID` FROM tbl_leave_types WHERE `leave_name`='".$LeaveName."'");//change action
             // $Lv_T_ID = $insert_id[0]->Lv_T_ID;//change action
 
-            function get_client_ips() {
+            function get_client_ips()
+            {
                 $ipaddress = '';
                 if (getenv('HTTP_CLIENT_IP')) {
                     $ipaddress = getenv('HTTP_CLIENT_IP');
@@ -1769,16 +1783,16 @@ class Attendance_Process_New extends CI_Controller
 
             date_default_timezone_set('Asia/Colombo');
             $current_time = date('Y-m-d H:i:s');
-            
+
             $system_page_name = "Attendance - Attendance Process";//change action
-            $spnID = $this->Db_model->getfilteredData("select `id` from tbl_audit_pages where `system_page_name` = '".$system_page_name."'");
+            $spnID = $this->Db_model->getfilteredData("select `id` from tbl_audit_pages where `system_page_name` = '" . $system_page_name . "'");
 
             $dataArray = array(
                 'log_user_id' => $Emp,
                 'ip_address' => $ip,
                 'system_action' => '(Already Attendance Processed) Attendance Process is not Processed',//change action
                 'trans_time' => $current_time,
-                'system_page' => $spnID[0]->id 
+                'system_page' => $spnID[0]->id
             );
 
             $this->Db_model->insertData("tbl_audit_log_all", $dataArray);
