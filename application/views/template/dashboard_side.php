@@ -440,6 +440,10 @@ $User_Name = $currentUser[0]->Emp_Full_Name;
                                     <li><a href="<?php echo base_url(); ?>Reports/Payroll/Pay_slip">PAY SLIP</a></li>
                                 <?php endif; ?>
 
+                                <?php if ($currentUser[0]->payslip_report == 1): ?>
+                                    <li><a href="<?php echo base_url(); ?>Reports/Payroll/C_Form">C FORM</a></li>
+                                <?php endif; ?>
+
                                 <?php if ($currentUser[0]->Payroll_reports == 1): ?>          
                                 </ul>
                             <?php endif; ?>    
