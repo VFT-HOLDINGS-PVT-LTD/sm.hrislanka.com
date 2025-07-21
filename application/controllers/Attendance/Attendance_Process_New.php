@@ -580,8 +580,11 @@ class Attendance_Process_New extends CI_Controller
 
         date_default_timezone_set('Asia/Colombo');
         $month = $this->input->post('cmb_month');
+        $year = $this->input->post('cmb_year');
 
-        $year = date('Y'); // Current year. You can also get this from POST if needed.
+        
+
+        // $year = date('Y'); // Current year. You can also get this from POST if needed.
 
         // Create from_date and to_date based on selected month
         $from_date = date("Y-m-01", strtotime("$year-$month-01")); // First day of the month
