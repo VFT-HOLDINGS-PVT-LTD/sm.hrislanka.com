@@ -126,6 +126,8 @@
                                                                 <br><br><br><br><br><br><br><br>
 
                                                                 <div class="form-group col-sm-6">
+                                                                    <label for="focusedinput"
+                                                                        class="col-sm-4 control-label">Year</label>
                                                                     <select required="" class="form-control"
                                                                         id="cmb_year" name="cmb_year">
                                                                         <option value="" default>-- Select --</option>
