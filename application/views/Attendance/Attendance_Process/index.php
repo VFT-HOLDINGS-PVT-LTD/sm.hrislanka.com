@@ -128,20 +128,22 @@
                                                                 <div class="form-group col-sm-6">
                                                                     <label for="focusedinput"
                                                                         class="col-sm-4 control-label">Year</label>
-                                                                    <select required="" class="form-control"
-                                                                        id="cmb_year" name="cmb_year">
-                                                                        <option value="" default>-- Select --</option>
+                                                                    <div class="col-sm-8">
+                                                                        <select required="" class="form-control"
+                                                                            id="cmb_year" name="cmb_year">
+                                                                            <option value="" default>-- Select --
+                                                                            </option>
+                                                                            <option value="2023">2023</option>
+                                                                            <option value="2024">2024</option>
+                                                                            <option value="2025">2025</option>
+                                                                            <option value="2026">2026</option>
+                                                                            <option value="2027">2027</option>
+                                                                            <option value="2028">2028</option>
+                                                                            <option value="2029">2029</option>
+                                                                            <option value="2030">2030</option>
 
-                                                                        <option value="2023">2023</option>
-                                                                        <option value="2024">2024</option>
-                                                                        <option value="2025">2025</option>
-                                                                        <option value="2026">2026</option>
-                                                                        <option value="2027">2027</option>
-                                                                        <option value="2028">2028</option>
-                                                                        <option value="2029">2029</option>
-                                                                        <option value="2030">2030</option>
-
-                                                                    </select>
+                                                                        </select>
+                                                                    </div>
                                                                 </div>
 
                                                                 <div class="form-group col-sm-6">
